@@ -63,7 +63,6 @@ ReactDOM.render(
         paymentOptions={PAYMENT_MODES}
         periods={PERIODS}
         discountSubCost={DISCOUNT_SUB_COST}
-        useGiftCode={false}
         buyAsGift={false}
         autoRenewal={true}
         discountSub={false}

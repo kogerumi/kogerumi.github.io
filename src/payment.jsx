@@ -7,10 +7,6 @@ export default class Payment extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            title: 'Выберите способ оплаты',
-            useGiftCode: this.props.useGiftCode
-        };
         this.selectOption = this.selectOption.bind(this);
         this.asGiftHandler = this.asGiftHandler.bind(this);
     }
@@ -30,6 +26,7 @@ export default class Payment extends React.Component {
 
     render() {
         var self = this,
+            asGiftOption,
             options = self.props.options.map(function (opt, i) {
 
                 if (opt.val == 'Подарочный код' && self.props.buyAsGift) {
@@ -47,10 +44,10 @@ export default class Payment extends React.Component {
                     optionGroup="payment"
                     select={self.selectOption}
                 />;
-            }),
-            asGiftOption;
+            });
 
-        if (!this.state.giftCode) {
+
+        if (!this.props.giftCode) {
             asGiftOption = (
                 <div className="checkbox">
                     <input
@@ -58,7 +55,6 @@ export default class Payment extends React.Component {
                         id="asGift"
                         checked={this.props.buyAsGift}
                         onChange={this.asGiftHandler}
-                        value="a2"
                     />
                     <label htmlFor="asGift">Купить подписку в подарок</label>
                 </div>
