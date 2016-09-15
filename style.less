@@ -1,0 +1,116 @@
+@pageGrey: #ededed;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+BODY {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+}
+
+p {
+  color: grey;
+  font-size: 0.9em;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  margin-right: 5px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+
+  &__header {
+    padding: 40px 10px;
+    text-align: center;
+  }
+
+}
+
+
+.subscription {
+
+  &__header {
+    text-align: center;
+    background-color: @pageGrey;
+    line-height: 50px;
+  }
+
+  &__step {
+    padding: 25px;
+    border-bottom: 1px solid @pageGrey;
+
+    &-heading {
+      font-size: 1.3em;
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__footer {
+      padding: 25px;
+      background-color: @pageGrey;
+  }
+
+  &__option {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 15px 15px 0;
+    width: 190px;
+    height: 100px;
+    border: 1px dashed grey;
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    &_active,
+    &:hover {
+      background-color: wheat;
+      border: 1px solid wheat;
+    }
+
+    &_period {
+      display: inline-block;
+      box-sizing: border-box;
+      height: 120px;
+      padding: 10px;
+      align-items: flex-start;
+    }
+
+    &_faded {
+      opacity: .6;
+    }
+
+  }
+
+  &__total {
+    margin-bottom: 20px;
+  }
+
+  &__sum {
+    font-size: 1.5em;
+  }
+
+
+}
+
+.hidden {
+  display: none;
+}
