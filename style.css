@@ -1,86 +1,106 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0
 }
+
 BODY {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 16px;
+    font-family: PT Sans, sans-serif;
+    font-size: 16px
 }
+
 p {
-  color: grey;
-  font-size: 0.9em;
+    color: grey;
+    font-size: .9em
 }
+
 label {
-  cursor: pointer;
+    cursor: pointer
 }
-input[type='checkbox'] {
-  margin-right: 5px;
+
+input[type=checkbox] {
+    margin-right: 5px
 }
+
 button {
-  padding: 10px;
-  cursor: pointer;
+    padding: 10px;
+    cursor: pointer
 }
+
 .page {
-  max-width: 900px;
-  margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto
 }
+
 .page__header {
-  padding: 40px 10px;
-  text-align: center;
+    padding: 40px 10px;
+    text-align: center
 }
+
 .subscription__header {
-  text-align: center;
-  background-color: #ededed;
-  line-height: 50px;
+    text-align: center;
+    background-color: #ededed;
+    line-height: 50px
 }
+
 .subscription__step {
-  padding: 25px;
-  border-bottom: 1px solid #ededed;
+    padding: 25px;
+    border-bottom: 1px solid #ededed
 }
+
 .subscription__step-heading {
-  font-size: 1.3em;
-  margin-bottom: 15px;
+    font-size: 1.3em;
+    margin-bottom: 15px
 }
+
 .subscription__footer {
-  padding: 25px;
-  background-color: #ededed;
+    padding: 25px;
+    background-color: #ededed
 }
+
 .subscription__option {
-  display: inline-flex;
-  vertical-align: middle;
-  align-items: center;
-  flex-flow: column wrap;
-  justify-content: center;
-  margin: 0 15px 15px 0;
-  width: 190px;
-  height: 100px;
-  border: 1px dashed grey;
-  cursor: pointer;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 15px 15px 0;
+    width: 190px;
+    height: 100px;
+    border: 1px dashed grey;
+    cursor: pointer
 }
+
 .subscription__option input {
-  display: none;
+    display: none
 }
-.subscription__option_active,
-.subscription__option:hover {
-  background-color: wheat;
-  border: 1px solid wheat;
+
+.subscription__option:hover, .subscription__option_active {
+    background-color: wheat;
+    border: 1px solid wheat
 }
+
 .subscription__option_period {
-  display: inline-block;
-  box-sizing: border-box;
-  height: 120px;
-  padding: 10px;
-  align-items: flex-start;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 120px;
+    padding: 10px;
+    align-items: flex-start
 }
+
 .subscription__option_faded {
-  opacity: .6;
+    opacity: .6
 }
+
 .subscription__total {
-  margin-bottom: 20px;
+    margin-bottom: 20px
 }
+
 .subscription__sum {
-  font-size: 1.5em;
+    font-size: 1.5em
 }
+
 .hidden {
-  display: none;
+    display: none
 }
+
+/*# sourceMappingURL=style.css.map*/

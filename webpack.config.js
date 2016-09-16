@@ -1,18 +1,16 @@
 var path = require('path'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    ExtractText = require("extract-text-webpack-plugin");
 
 module.exports = {
-    devtool: 'inline-source-map',
-    entry:  [
-        './src'
-    ],
+    devtool: 'source-map',
+    entry: ['./src/index.js', './style.less'],
     output: {
         path: __dirname,
         filename: 'bundle.js'
     },
     resolve: {
-        modulesDirectories: ['node_modules', 'src'],
-        extension: ['', '.js']
+        modulesDirectories: ['node_modules']
     },
     module: {
         loaders: [
@@ -20,11 +18,14 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loaders: ['babel']
+            },
+            {
+                test: /\.less$/,
+                loader: ExtractText.extract("style-loader", "css-loader!less-loader")
             }
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new ExtractText("style.css")
     ]
 };
